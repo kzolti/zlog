@@ -42,7 +42,8 @@ The message will be printed to the console with a timestamp and log level.
 
 ## Example
 Here is an example usage of the logging library:
-```#include "logger.h"
+```
+#include "logger.h"
 
 int main()
 {
@@ -59,4 +60,5 @@ ___debug("Debug information for iteration %d.", i);
 }
 ___fatal("Program terminated abnormally.");
 return 0;
-}```
+}
+```
