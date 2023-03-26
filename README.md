@@ -26,18 +26,16 @@ You can customize the behavior of the logging library by defining the `MY_DEBUG`
 
 ## Building
 
-To build the library, follow these steps:
+### To build the library, follow these steps:
 
-* Clone the repository to your local machine.
-  ```git clone git@github.com:kzolti/zlog.git```
-* Create a build directory within the project directory.
-  Navigate to the build directory
-  ```mkdir build && cd build```
-
-*  Run cmake .. to generate build files and run make to build the library.
-  ```cmake .. && make```
-  or
-  ``` cmake .. && cmake --build .```
+Clone the repository to your local machine.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```git clone git@github.com:kzolti/zlog.git```<br>
+Create a build directory within the project directory and navigate to the build directory<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```cd zlog && mkdir build && cd build```<br>
+Run cmake .. to generate build files and run make to build the library.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```cmake .. && make```<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  or<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` cmake .. && cmake --build .```
 
 ## Usage
 
