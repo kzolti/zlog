@@ -6,8 +6,8 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_library(zlog STATIC
-    log.h
-    logimpl.h logimpl.cpp
+    src/log.h
+    src/logimpl.h src/logimpl.cpp
 )
 set_property(TARGET zlog PROPERTY CXX_STANDARD 11)
 install(TARGETS zlog
@@ -17,4 +17,3 @@ install(TARGETS zlog
 
 #install(FILES log.h DESTINATION include)
 #install(FILES logimpl.h DESTINATION include)
-
