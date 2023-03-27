@@ -89,7 +89,8 @@ return 0;
 }
 ```
 
-./myapp output:```  
+./myapp output:
+```  
 2023.03.27 20:11:02.644  SUCCESS Program started :16 /tmp/tmp/zlog/example/main.cpp main:7   
 2023.03.27 20:11:02.644  INFO    Processing iteration 0 /tmp/tmp/zlog/example/main.cpp main:9   
 2023.03.27 20:11:02.644  DEBUG   Debug information for iteration 0. /tmp/tmp/zlog/example/main.cpp main:16   
