@@ -46,7 +46,7 @@ Here is an example usage of the logging library:
 ```./myapp``` or  ```./myapp > output.log 2> error.log```  
 
 ```
-#include "logger.h"
+#include <log.h>
 
 nt main()
 {
