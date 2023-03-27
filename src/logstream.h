@@ -6,9 +6,7 @@ using namespace std;
 
 class LogStream {
 public:
-    LogStream(LogLevel level, const char* file, int line, const char* function)
-        : m_level(level), m_file(file), m_line(line), m_function(function)
-    {}
+    LogStream(LogLevel level, const char* file, int line, const char* function);
 
     template <typename T>
     LogStream& operator<<(const T& value) {
@@ -16,9 +14,7 @@ public:
         return *this;
     }
 
-    ~LogStream() {
-        log(m_level, m_ss.str(), m_file, m_line, m_function);
-    }
+    ~LogStream();
 
 private:
     std::stringstream m_ss;

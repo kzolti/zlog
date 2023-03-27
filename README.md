@@ -62,11 +62,11 @@ The message will be printed to the console with a timestamp and log level.
 ## Example
 
 Here is an example usage of the logging library:
-```cd example```
-```mkdir build && cd build```
-```cmake``` or  ```cmake -DCMAKE_BUILD_TYPE=Debug  ..```
-```make```
-```./myapp``` or  ```./myapp > output.log 2> error.log```
+```cd example```  
+```mkdir build && cd build```  
+```cmake``` or  ```cmake -DCMAKE_BUILD_TYPE=Debug  ..```  
+```make```  
+```./myapp``` or  ```./myapp > output.log 2> error.log```  
 
 ```
 #include "logger.h"
@@ -90,3 +90,30 @@ return 0;
 ```
 
 ./myapp output:
+2023.03.27 20:11:02.645  ERROR   An error occurred on iteration 7. /tmp/tmp/zlog/example/main.cpp main:14
+2023.03.27 20:11:02.645  FATAL   Program terminated abnormally. /tmp/tmp/zlog/example/main.cpp main:19
+2023.03.27 20:11:02.644  SUCCESS Program started :16 /tmp/tmp/zlog/example/main.cpp main:7
+2023.03.27 20:11:02.644  INFO    Processing iteration 0 /tmp/tmp/zlog/example/main.cpp main:9
+2023.03.27 20:11:02.644  DEBUG   Debug information for iteration 0. /tmp/tmp/zlog/example/main.cpp main:16
+2023.03.27 20:11:02.645  INFO    Processing iteration 1 /tmp/tmp/zlog/example/main.cpp main:9
+2023.03.27 20:11:02.645  DEBUG   Debug information for iteration 1. /tmp/tmp/zlog/example/main.cpp main:16
+2023.03.27 20:11:02.645  INFO    Processing iteration 2 /tmp/tmp/zlog/example/main.cpp main:9
+2023.03.27 20:11:02.645  DEBUG   Debug information for iteration 2. /tmp/tmp/zlog/example/main.cpp main:16
+2023.03.27 20:11:02.645  INFO    Processing iteration 3 /tmp/tmp/zlog/example/main.cpp main:9
+2023.03.27 20:11:02.645  DEBUG   Debug information for iteration 3. /tmp/tmp/zlog/example/main.cpp main:16
+2023.03.27 20:11:02.645  INFO    Processing iteration 4 /tmp/tmp/zlog/example/main.cpp main:9
+2023.03.27 20:11:02.645  DEBUG   Debug information for iteration 4. /tmp/tmp/zlog/example/main.cpp main:16
+2023.03.27 20:11:02.645  INFO    Processing iteration 5 /tmp/tmp/zlog/example/main.cpp main:9
+2023.03.27 20:11:02.645  WARNING An issue occurred on iteration 5. /tmp/tmp/zlog/example/main.cpp main:11
+2023.03.27 20:11:02.645  DEBUG   Debug information for iteration 5. /tmp/tmp/zlog/example/main.cpp main:16
+2023.03.27 20:11:02.645  INFO    Processing iteration 6 /tmp/tmp/zlog/example/main.cpp main:9
+2023.03.27 20:11:02.645  DEBUG   Debug information for iteration 6. /tmp/tmp/zlog/example/main.cpp main:16
+2023.03.27 20:11:02.645  INFO    Processing iteration 7 /tmp/tmp/zlog/example/main.cpp main:9
+2023.03.27 20:11:02.645  ERROR   An error occurred on iteration 7. /tmp/tmp/zlog/example/main.cpp main:14
+2023.03.27 20:11:02.645  DEBUG   Debug information for iteration 7. /tmp/tmp/zlog/example/main.cpp main:16
+2023.03.27 20:11:02.645  INFO    Processing iteration 8 /tmp/tmp/zlog/example/main.cpp main:9
+2023.03.27 20:11:02.645  DEBUG   Debug information for iteration 8. /tmp/tmp/zlog/example/main.cpp main:16
+2023.03.27 20:11:02.645  INFO    Processing iteration 9 /tmp/tmp/zlog/example/main.cpp main:9
+2023.03.27 20:11:02.645  DEBUG   Debug information for iteration 9. /tmp/tmp/zlog/example/main.cpp main:16
+2023.03.27 20:11:02.645  DEBUG   ddddddddddddddddddddddddddddd /tmp/tmp/zlog/example/main.cpp main:18
+2023.03.27 20:11:02.645  FATAL   Program terminated abnormally. /tmp/tmp/zlog/example/main.cpp main:19
