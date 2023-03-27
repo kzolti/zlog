@@ -61,7 +61,6 @@ nt main()
         }
         ___debug<<"Debug information for iteration "<<i<<".";
     }
-    ___debug<<"ddddddddddddddddddddddddddddd";
     ___fatal<<"Program terminated abnormally.";
     return 0;
 }
@@ -91,7 +90,6 @@ nt main()
 2023.03.27 20:25:48.742  INFO    Processing iteration 8 /tmp/tmp/zlog/example/main.cpp main:9 
 2023.03.27 20:25:48.742  DEBUG   Debug information for iteration 8. /tmp/tmp/zlog/example/main.cpp main:16 
 2023.03.27 20:25:48.742  INFO    Processing iteration 9 /tmp/tmp/zlog/example/main.cpp main:9 
-2023.03.27 20:25:48.742  DEBUG   Debug information for iteration 9. /tmp/tmp/zlog/example/main.cpp main:16 
-2023.03.27 20:25:48.742  DEBUG   ddddddddddddddddddddddddddddd /tmp/tmp/zlog/example/main.cpp main:18 
-2023.03.27 20:25:48.742  FATAL   Program terminated abnormally. /tmp/tmp/zlog/example/main.cpp main:19
+2023.03.27 20:25:48.742  DEBUG   Debug information for iteration 9. /tmp/tmp/zlog/example/main.cpp main:16
+2023.03.27 20:25:48.742  FATAL   Program terminated abnormally. /tmp/tmp/zlog/example/main.cpp main:18
 ```
