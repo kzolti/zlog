@@ -28,24 +28,24 @@ You can customize the behavior of the logging library by defining the `MY_DEBUG`
 
 ### To build the library, follow these steps:
 
-* Clone the repository to your local machine.  
+* Clone the repository to your local machine.
   &nbsp;&nbsp;&nbsp;&nbsp;```git clone git@github.com:kzolti/zlog.git```
-* Create a build directory within the project directory and navigate to the build directory  
-  &nbsp;&nbsp;&nbsp;&nbsp;```cd zlog && mkdir build && cd build```  
-* Run cmake .. to generate build files and run make to build the library.  
-  &nbsp;&nbsp;&nbsp;&nbsp;```cmake .. && make```  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  or  
-  &nbsp;&nbsp;&nbsp;&nbsp;```cmake .. && cmake --build .```  
-* Install lib and include  
-  &nbsp;&nbsp;&nbsp;&nbsp;```sudo make install```  
-  &nbsp;&nbsp;&nbsp;&nbsp; output:  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Install the project...  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Install configuration: ""  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Installing: /usr/local/lib/libzlog.a  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Installing: /usr/local/include/log.h  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Installing: /usr/local/include/logimpl.h  
-* Uninstall lib and include  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```sudo make uninstall```  
+* Create a build directory within the project directory and navigate to the build directory
+  &nbsp;&nbsp;&nbsp;&nbsp;```cd zlog && mkdir build && cd build```
+* Run cmake .. to generate build files and run make to build the library.
+  &nbsp;&nbsp;&nbsp;&nbsp;```cmake .. && make```
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  or
+  &nbsp;&nbsp;&nbsp;&nbsp;```cmake .. && cmake --build .```
+* Install lib and include
+  &nbsp;&nbsp;&nbsp;&nbsp;```sudo make install```
+  &nbsp;&nbsp;&nbsp;&nbsp; output:
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Install the project...
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Install configuration: ""
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Installing: /usr/local/lib/libzlog.a
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Installing: /usr/local/include/log.h
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Installing: /usr/local/include/logimpl.h
+* Uninstall lib and include
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```sudo make uninstall```
 
 ## Usage
 
@@ -66,6 +66,7 @@ Here is an example usage of the logging library:
 ```mkdir build && cd build```
 ```cmake``` or  ```cmake -DCMAKE_BUILD_TYPE=Debug  ..```
 ```make```
+```./myapp``` or  ```./myapp > output.log 2> error.log```
 
 ```
 #include "logger.h"
@@ -87,3 +88,5 @@ ___fatal("Program terminated abnormally.");
 return 0;
 }
 ```
+
+./myapp output:

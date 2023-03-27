@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 #set(zlog_include_dir ${CMAKE_CURRENT_BINARY_DIR}/../src)
 set(zlog_include_dir ${CMAKE_SOURCE_DIR}/../src)
 include_directories(${zlog_include_dir})
-add_library(zlog STATIC ${zlog_include_dir}/log.h ${zlog_include_dir}/logimpl.h ${zlog_include_dir}/logimpl.cpp)
+add_library(zlog STATIC ${zlog_include_dir}/log.h ${zlog_include_dir}/logimpl.h ${zlog_include_dir}/logimpl.cpp ${zlog_include_dir}/logstream.h ${zlog_include_dir}/logstream.cpp)
 
 
 add_executable(myapp main.cpp)

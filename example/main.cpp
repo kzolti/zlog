@@ -4,18 +4,18 @@ using namespace std;
 
 int main()
 {
-    ___success("Program started.");
+    ___success<<"Program started :"<<16;
     for (int i = 0; i < 10; i++){
-        ___info("Processing iteration %d.");
+        ___info<<"Processing iteration "<<i;
         if (i == 5){
-            ___warning("An issue occurred on iteration %d.");
+            ___warning<<"An issue occurred on iteration " <<i<<".";
         }
         if (i == 7){
-            ___error("An error occurred on iteration %d.");
+            ___error<<"An error occurred on iteration "<<i<<".";
         }
-        ___debug("Debug information for iteration %d.");
+        ___debug<<"Debug information for iteration "<<i<<".";
     }
-    ___debug("ddddddddddddddddddddddddddddd");
-    ___fatal("Program terminated abnormally.");
+    ___debug<<"ddddddddddddddddddddddddddddd";
+    ___fatal<<"Program terminated abnormally.";
     return 0;
 }
