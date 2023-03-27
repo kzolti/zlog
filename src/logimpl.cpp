@@ -12,9 +12,9 @@ void log(LogLevel level, const std::string& message,
          const char* file, int line, const char* function)
 {
     // Ha nem debug akkor return
-#ifdef MY_DEBUG
+#ifdef DEBUG
 #else
-    if (level == LogLevel::DEBUG ) {
+    if (level == LogLevel::_DEBUG ) {
         return;
     }
 #endif
@@ -30,39 +30,39 @@ void log(LogLevel level, const std::string& message,
     const char* color = "";
     const char* levelStr = "";
     switch (level) {
-           case LogLevel::SUCCESS:
+           case LogLevel::_SUCCESS:
                color = "\033[32m";
                levelStr = "SUCCESS";
                break;
-           case LogLevel::INFO:
+           case LogLevel::_INFO:
                color = "\033[34m";
                levelStr = "INFO   ";
                break;
-           case LogLevel::WARNING:
+           case LogLevel::_WARNING:
                color = "\033[33m";
                levelStr = "WARNING";
                break;
-           case LogLevel::ERROR:
+           case LogLevel::_ERROR:
                color = "\033[31m";
                levelStr = "ERROR  ";
                break;
-           case LogLevel::DEBUG:
+           case LogLevel::_DEBUG:
                color = "\033[35m";
                levelStr = "DEBUG  ";
                break;
-           case LogLevel::FATAL:
+           case LogLevel::_FATAL:
                color = "\033[31m";
                levelStr = "FATAL  ";
                break;
            default:
                break;
        }
-    if (level == LogLevel::ERROR || level == LogLevel::FATAL){
+    if (level == LogLevel::_ERROR || level == LogLevel::_FATAL){
         fprintf(stderr, "%s%s %s:%s %s %s:%d \033[0m\n", color, timeStr.c_str(), levelStr, message.c_str(), file, function,line);
     }else{
         fprintf(stdout, "%s%s %s:%s\033[0m %s %s:%d \n", timeStr.c_str(), color, levelStr, message.c_str(), file, function,line);
     }
-        if (level == LogLevel::FATAL) {
+        if (level == LogLevel::_FATAL) {
             exit(EXIT_FAILURE);
         }
 

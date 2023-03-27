@@ -4,12 +4,6 @@ using namespace std;
 
 int main()
 {
-#ifdef MY_DEBUG
-    std::cout<<"myDEBUG mode on  "<<1<< "\n";
-#else
-    std::cout<<"NO DEBUG llll "<<0<< "\n";
-#endif
-___success("sssssssss");
     ___success("Program started.");
     for (int i = 0; i < 10; i++){
         ___info("Processing iteration %d.");

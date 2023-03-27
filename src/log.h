@@ -8,10 +8,10 @@
 //void log(LogLevel level, const std::string& message,
 //         const char* file, int line, const char* function);
 
-#define ___success(message) log(LogLevel::SUCCESS, message, __FILE__, __LINE__, __FUNCTION__)
-#define ___info(message) log(LogLevel::INFO, message, __FILE__, __LINE__, __FUNCTION__)
-#define ___warning(message) log(LogLevel::WARNING, message, __FILE__, __LINE__, __FUNCTION__)
-#define ___error(message) log(LogLevel::ERROR, message, __FILE__, __LINE__, __FUNCTION__)
-#define ___debug(message) log(LogLevel::DEBUG, message, __FILE__, __LINE__, __FUNCTION__)
-#define ___fatal(message) log(LogLevel::FATAL, message, __FILE__, __LINE__, __FUNCTION__)
+#define ___success(message) log(LogLevel::_SUCCESS, message, __FILE__, __LINE__, __FUNCTION__)
+#define ___info(message) log(LogLevel::_INFO, message, __FILE__, __LINE__, __FUNCTION__)
+#define ___warning(message) log(LogLevel::_WARNING, message, __FILE__, __LINE__, __FUNCTION__)
+#define ___error(message) log(LogLevel::_ERROR, message, __FILE__, __LINE__, __FUNCTION__)
+#define ___debug(message) log(LogLevel::_DEBUG, message, __FILE__, __LINE__, __FUNCTION__)
+#define ___fatal(message) log(LogLevel::_FATAL, message, __FILE__, __LINE__, __FUNCTION__)
 #endif // LOG_H
