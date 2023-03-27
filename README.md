@@ -53,7 +53,7 @@ Include the log.h header in your project.
 
 Add the following line to your CMakeLists.txt file to enable debug logging:
 
-```set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -DMY_DEBUG")```
+```set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -DDEBUG")```
 
 Call one of the logging macros in your code (e.g. ___info("Hello, world!")).
 
@@ -62,6 +62,10 @@ The message will be printed to the console with a timestamp and log level.
 ## Example
 
 Here is an example usage of the logging library:
+```cd example```
+```mkdir build && cd build```
+```cmake``` or  ```cmake -DCMAKE_BUILD_TYPE=Debug  ..```
+```make```
 
 ```
 #include "logger.h"
