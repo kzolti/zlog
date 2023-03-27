@@ -71,49 +71,50 @@ Here is an example usage of the logging library:
 ```
 #include "logger.h"
 
-int main()
+nt main()
 {
-___success("Program started.");
-for (int i = 0; i < 10; i++){
-___info("Processing iteration %d.", i);
-if (i == 5){
-___warning("An issue occurred on iteration %d.", i);
-}
-if (i == 7){
-___error("An error occurred on iteration %d.", i);
-}
-___debug("Debug information for iteration %d.", i);
-}
-___fatal("Program terminated abnormally.");
-return 0;
+    ___success<<"Program started :"<<16;
+    for (int i = 0; i < 10; i++){
+        ___info<<"Processing iteration "<<i;
+        if (i == 5){
+            ___warning<<"An issue occurred on iteration " <<i<<".";
+        }
+        if (i == 7){
+            ___error<<"An error occurred on iteration "<<i<<".";
+        }
+        ___debug<<"Debug information for iteration "<<i<<".";
+    }
+    ___debug<<"ddddddddddddddddddddddddddddd";
+    ___fatal<<"Program terminated abnormally.";
+    return 0;
 }
 ```
 
 ./myapp output:
 ```  
-2023.03.27 20:11:02.644  SUCCESS Program started :16 /tmp/tmp/zlog/example/main.cpp main:7   
-2023.03.27 20:11:02.644  INFO    Processing iteration 0 /tmp/tmp/zlog/example/main.cpp main:9   
-2023.03.27 20:11:02.644  DEBUG   Debug information for iteration 0. /tmp/tmp/zlog/example/main.cpp main:16   
-2023.03.27 20:11:02.645  INFO    Processing iteration 1 /tmp/tmp/zlog/example/main.cpp main:9   
-2023.03.27 20:11:02.645  DEBUG   Debug information for iteration 1. /tmp/tmp/zlog/example/main.cpp main:16   
-2023.03.27 20:11:02.645  INFO    Processing iteration 2 /tmp/tmp/zlog/example/main.cpp main:9   
-2023.03.27 20:11:02.645  DEBUG   Debug information for iteration 2. /tmp/tmp/zlog/example/main.cpp main:16   
-2023.03.27 20:11:02.645  INFO    Processing iteration 3 /tmp/tmp/zlog/example/main.cpp main:9   
-2023.03.27 20:11:02.645  DEBUG   Debug information for iteration 3. /tmp/tmp/zlog/example/main.cpp main:16   
-2023.03.27 20:11:02.645  INFO    Processing iteration 4 /tmp/tmp/zlog/example/main.cpp main:9   
-2023.03.27 20:11:02.645  DEBUG   Debug information for iteration 4. /tmp/tmp/zlog/example/main.cpp main:16   
-2023.03.27 20:11:02.645  INFO    Processing iteration 5 /tmp/tmp/zlog/example/main.cpp main:9   
-2023.03.27 20:11:02.645  WARNING An issue occurred on iteration 5. /tmp/tmp/zlog/example/main.cpp main:11   
-2023.03.27 20:11:02.645  DEBUG   Debug information for iteration 5. /tmp/tmp/zlog/example/main.cpp main:16   
-2023.03.27 20:11:02.645  INFO    Processing iteration 6 /tmp/tmp/zlog/example/main.cpp main:9   
-2023.03.27 20:11:02.645  DEBUG   Debug information for iteration 6. /tmp/tmp/zlog/example/main.cpp main:16   
-2023.03.27 20:11:02.645  INFO    Processing iteration 7 /tmp/tmp/zlog/example/main.cpp main:9   
-2023.03.27 20:11:02.645  ERROR   An error occurred on iteration 7. /tmp/tmp/zlog/example/main.cpp main:14   
-2023.03.27 20:11:02.645  DEBUG   Debug information for iteration 7. /tmp/tmp/zlog/example/main.cpp main:16   
-2023.03.27 20:11:02.645  INFO    Processing iteration 8 /tmp/tmp/zlog/example/main.cpp main:9   
-2023.03.27 20:11:02.645  DEBUG   Debug information for iteration 8. /tmp/tmp/zlog/example/main.cpp main:16   
-2023.03.27 20:11:02.645  INFO    Processing iteration 9 /tmp/tmp/zlog/example/main.cpp main:9   
-2023.03.27 20:11:02.645  DEBUG   Debug information for iteration 9. /tmp/tmp/zlog/example/main.cpp main:16   
-2023.03.27 20:11:02.645  DEBUG   ddddddddddddddddddddddddddddd /tmp/tmp/zlog/example/main.cpp main:18   
-2023.03.27 20:11:02.645  FATAL   Program terminated abnormally. /tmp/tmp/zlog/example/main.cpp main:19
+2023.03.27 20:25:48.742  SUCCESS Program started :16 /tmp/tmp/zlog/example/main.cpp main:7 
+2023.03.27 20:25:48.742  INFO    Processing iteration 0 /tmp/tmp/zlog/example/main.cpp main:9 
+2023.03.27 20:25:48.742  DEBUG   Debug information for iteration 0. /tmp/tmp/zlog/example/main.cpp main:16 
+2023.03.27 20:25:48.742  INFO    Processing iteration 1 /tmp/tmp/zlog/example/main.cpp main:9 
+2023.03.27 20:25:48.742  DEBUG   Debug information for iteration 1. /tmp/tmp/zlog/example/main.cpp main:16 
+2023.03.27 20:25:48.742  INFO    Processing iteration 2 /tmp/tmp/zlog/example/main.cpp main:9 
+2023.03.27 20:25:48.742  DEBUG   Debug information for iteration 2. /tmp/tmp/zlog/example/main.cpp main:16 
+2023.03.27 20:25:48.742  INFO    Processing iteration 3 /tmp/tmp/zlog/example/main.cpp main:9 
+2023.03.27 20:25:48.742  DEBUG   Debug information for iteration 3. /tmp/tmp/zlog/example/main.cpp main:16 
+2023.03.27 20:25:48.742  INFO    Processing iteration 4 /tmp/tmp/zlog/example/main.cpp main:9 
+2023.03.27 20:25:48.742  DEBUG   Debug information for iteration 4. /tmp/tmp/zlog/example/main.cpp main:16 
+2023.03.27 20:25:48.742  INFO    Processing iteration 5 /tmp/tmp/zlog/example/main.cpp main:9 
+2023.03.27 20:25:48.742  WARNING An issue occurred on iteration 5. /tmp/tmp/zlog/example/main.cpp main:11 
+2023.03.27 20:25:48.742  DEBUG   Debug information for iteration 5. /tmp/tmp/zlog/example/main.cpp main:16 
+2023.03.27 20:25:48.742  INFO    Processing iteration 6 /tmp/tmp/zlog/example/main.cpp main:9 
+2023.03.27 20:25:48.742  DEBUG   Debug information for iteration 6. /tmp/tmp/zlog/example/main.cpp main:16 
+2023.03.27 20:25:48.742  INFO    Processing iteration 7 /tmp/tmp/zlog/example/main.cpp main:9 
+2023.03.27 20:25:48.742  ERROR   An error occurred on iteration 7. /tmp/tmp/zlog/example/main.cpp main:14 
+2023.03.27 20:25:48.742  DEBUG   Debug information for iteration 7. /tmp/tmp/zlog/example/main.cpp main:16 
+2023.03.27 20:25:48.742  INFO    Processing iteration 8 /tmp/tmp/zlog/example/main.cpp main:9 
+2023.03.27 20:25:48.742  DEBUG   Debug information for iteration 8. /tmp/tmp/zlog/example/main.cpp main:16 
+2023.03.27 20:25:48.742  INFO    Processing iteration 9 /tmp/tmp/zlog/example/main.cpp main:9 
+2023.03.27 20:25:48.742  DEBUG   Debug information for iteration 9. /tmp/tmp/zlog/example/main.cpp main:16 
+2023.03.27 20:25:48.742  DEBUG   ddddddddddddddddddddddddddddd /tmp/tmp/zlog/example/main.cpp main:18 
+2023.03.27 20:25:48.742  FATAL   Program terminated abnormally. /tmp/tmp/zlog/example/main.cpp main:19
 ```
