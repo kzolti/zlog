@@ -59,9 +59,9 @@ void log(LogLevel level, const std::string& message,
        }
     if (level == LogLevel::_ERROR || level == LogLevel::_FATAL){
         fprintf(stderr, "%s%s %s %s %s:%d \n", timeStr.c_str(), levelStr, message.c_str(), file, function,line);
-        fprintf(stdout, "%s%s%s %s %s %s:%d \033[33m -stdout\n",color, timeStr.c_str(), levelStr, message.c_str(), file, function,line);
+        fprintf(stdout, "%s%s%s %s %s %s:%d \033[0m -stdout\n",color, timeStr.c_str(), levelStr, message.c_str(), file, function,line);
     }else{
-        fprintf(stdout, "%s%s%s %s %s %s:%d \033[33m\n",color, timeStr.c_str(), levelStr, message.c_str(), file, function,line);
+        fprintf(stdout, "%s%s%s %s %s %s:%d \033[0m\n",color, timeStr.c_str(), levelStr, message.c_str(), file, function,line);
     }
         if (level == LogLevel::_FATAL) {
             exit(EXIT_FAILURE);
