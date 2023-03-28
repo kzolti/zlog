@@ -5,7 +5,7 @@
 #include <chrono>
 #include <ctime>
 #include <sstream>
-
+#include <iomanip>
 
 
 void log(LogLevel level, const std::string& message,
@@ -30,41 +30,41 @@ void log(LogLevel level, const std::string& message,
     const char* color = "";
     const char* levelStr = "";
     switch (level) {
-           case LogLevel::_SUCCESS:
-               color = "\033[32m";
-               levelStr = "SUCCESS";
-               break;
-           case LogLevel::_INFO:
-               color = "\033[34m";
-               levelStr = "INFO   ";
-               break;
-           case LogLevel::_WARNING:
-               color = "\033[33m";
-               levelStr = "WARNING";
-               break;
-           case LogLevel::_ERROR:
-               color = "\033[31m";
-               levelStr = "ERROR  ";
-               break;
-           case LogLevel::_DEBUG:
-               color = "\033[35m";
-               levelStr = "DEBUG  ";
-               break;
-           case LogLevel::_FATAL:
-               color = "\033[31m";
-               levelStr = "FATAL  ";
-               break;
-           default:
-               break;
-       }
-    if (level == LogLevel::_ERROR || level == LogLevel::_FATAL){
-        fprintf(stderr, "%s%s %s %s %s:%d \n", timeStr.c_str(), levelStr, message.c_str(), file, function,line);
-        fprintf(stdout, "%s%s%s %s %s %s:%d \033[0m -stdout\n",color, timeStr.c_str(), levelStr, message.c_str(), file, function,line);
-    }else{
-        fprintf(stdout, "%s%s%s %s %s %s:%d \033[0m\n",color, timeStr.c_str(), levelStr, message.c_str(), file, function,line);
+    case LogLevel::_SUCCESS:
+        color = "\033[32m";
+        levelStr = "SUCCESS";
+        break;
+    case LogLevel::_INFO:
+        color = "\033[34m";
+        levelStr = "INFO   ";
+        break;
+    case LogLevel::_WARNING:
+        color = "\033[33m";
+        levelStr = "WARNING";
+        break;
+    case LogLevel::_ERROR:
+        color = "\033[31m";
+        levelStr = "ERROR  ";
+        break;
+    case LogLevel::_DEBUG:
+        color = "\033[37m";
+        levelStr = "DEBUG  ";
+        break;
+    case LogLevel::_FATAL:
+        color = "\033[31m";
+        levelStr = "FATAL  ";
+        break;
+    default:
+        break;
     }
-        if (level == LogLevel::_FATAL) {
-            exit(EXIT_FAILURE);
-        }
+    if (level == LogLevel::_ERROR || level == LogLevel::_FATAL){
+        std::cerr << timeStr.c_str()<< levelStr <<std::setw(56) <<std::left<<  message << " "<< file<<":"<<line<< " "<< function <<"()"<<std::endl;
+        std::cout << color << timeStr.c_str()<< levelStr <<std::setw(56) <<std::left<<  message << " "<< file<<":"<<line<< " "<< function <<"()\033[0m -stdout"<<std::endl;
+    }else{
+        std::cout << color << timeStr.c_str()<< levelStr <<std::setw(56) <<std::left<<  message << " "<< file<<":"<<line<< " "<< function <<"()\033[0m"<<std::endl;
+    }
+    if (level == LogLevel::_FATAL) {
+        exit(EXIT_FAILURE);
+    }
 
 }
